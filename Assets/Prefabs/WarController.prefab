@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &856303051887360439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 856303051887360436}
+  - component: {fileID: 856303051887360437}
+  m_Layer: 0
+  m_Name: WarController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &856303051887360436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856303051887360439}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &856303051887360437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856303051887360439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745fb6bb636a7ef4593142b40f80a26d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPlayerTowerHealth: 1200
+  maxEnemyTowerHealth: 1200
+  battlepoints: 0
+  battlePointsPerSecond: 10
+  level: 1
+  playerHealthSlider: {fileID: 0}
+  enemyHealthSlider: {fileID: 0}
+  bp: {fileID: 0}
+  bpRate: {fileID: 0}
+  toolTipBox: {fileID: 0}
+  toolTipDesc: {fileID: 0}
+  toolTipCost: {fileID: 0}
+  tooltips:
+  - A fast and dispensable unit. Very outspoken. Useful for disrupting the enemy
+    ranks. They can't stop all of us (probably)
+  - 'High attack, low defense. A true glass canon (hehe). '
+  - 'Unstoppable, indestructible, it has but one purpose: corporate espionage. Useful
+    as a corkscrew to destroy your enemies defenses.'
+  - The pen is mightier than the sword, and the pen's ability to burn lines onto
+    the fabric of reality is mightier than its victims. Area of effect damage.
+  outcomeCanvas: {fileID: 0}
+  outcomeText: {fileID: 0}
+  netText: {fileID: 0}
+  playerUnitTypes:
+  - {fileID: 2919201370699446590, guid: c4ce2774f7270ed469e4ac54d504a087, type: 3}
+  - {fileID: 5290321099162426711, guid: 33043f02ffc25e34c986f6fcdfd15e07, type: 3}
+  - {fileID: 7793318316365543470, guid: 62f0cd16c04d7df4e831e6c02db4fa68, type: 3}
+  - {fileID: 1521437500927314271, guid: 18d17c9b43b4086418313bcd42cde26a, type: 3}
+  unitStats: []
+  playerSpawn: {fileID: 0}
+  enemySpawn: {fileID: 0}
+  hasWon: 0
+  hasLost: 0
+  enemyBP: 0
+  behaviourLevels:
+  - towerMax: 400
+    spawns:
+    - prefab: {fileID: 5488937043861146215, guid: 19a36bbe188d2b84db0d7f369c7dcf03,
+        type: 3}
+      timePerSpawn: 7
+    - prefab: {fileID: 9180560616912953387, guid: 091d574bfb94efe47b61d8e23d744a61,
+        type: 3}
+      timePerSpawn: 9
+    bpPerSecond: 10
+    aggressiveness: 0.161
+    maxSpawnsPerTurn: 3
+    spawnSpacing: 2.51
+    winRewards:
+      moneyReward: 100
+      favourReward: 10
+      mpReward: 3
+    loseRewards:
+      moneyReward: 40
+      favourReward: 5
+      mpReward: 1
